@@ -15,15 +15,21 @@ public class BasePowerFind {
 
 	public static void main(String[] args) {
 		BasePowerFind bpf = new BasePowerFind();
-		int x = 0;
-		int y = 0;
-		int r = 0;
-		Scanner sc = new Scanner(System.in);
-		x = sc.nextInt();
-		y = sc.nextInt();
 
-		r = bpf.function(x, y);
-		System.out.println(r);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the base number X: ");
+		int x = sc.nextInt();
+		System.out.print("Enter the power N = ");
+		int n = sc.nextInt();
+		// if user enter negative value, so we are checking n<0 or not.
+		if (n < 0) {
+			System.out.println("Power N must be a integer");
+		} else {
+			int result = bpf.function(x, n);
+
+			System.out.println(x + " power " + n + " is: " + result);
+		}
 		sc.close();
 	}
 
