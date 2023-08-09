@@ -28,7 +28,7 @@ public class BasePowerFind {
 		} else {
 			int result = bpf.function(x, n);
 
-			System.out.println(x + " power " + n + " is: " + result);
+			System.out.println("X power N is: " + result);
 		}
 		sc.close();
 	}
